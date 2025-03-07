@@ -79,12 +79,3 @@ After homepage completion:
 - Dashboard views
 
 ## Notes & Decisions
-
-- Color scheme using purple/blue gradients for modern Web3 aesthetic
-- Using gradients for section backgrounds to create visual interest
-- Replaced traditional badges with card-based designs for better visual impact
-- Structured components for reusability across the platform
-- Implemented component-based architecture for better maintainability
-- Standardized text colors to black in header and footer for consistent and improved readability
-- Enhanced CTA section with striking design to drive user engagement
-- Simplified footer for cleaner look, removing social links and focusing on essential navigation

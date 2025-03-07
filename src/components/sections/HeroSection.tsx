@@ -15,13 +15,13 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
                 href="/projects" 
-                className="bg-neutral-900 hover:bg-black text-white font-medium px-8 py-4 rounded-full transition-all hover:shadow-lg text-center"
+                className="bg-black hover:bg-gray-900 text-white font-medium px-8 py-4 rounded-full transition-all hover:shadow-lg text-center"
               >
                 Find Projects
               </Link>
               <Link 
                 href="/talent" 
-                className="bg-transparent hover:bg-neutral-100 text-neutral-900 font-medium px-8 py-4 rounded-full border border-neutral-200 transition-all hover:border-neutral-300 text-center"
+                className="bg-transparent hover:bg-gray-100 text-gray-900 font-medium px-8 py-4 rounded-full border border-gray-200 transition-all hover:border-gray-300 text-center"
               >
                 Hire Talent
               </Link>

@@ -37,20 +37,9 @@ export default function ProjectsList() {
             {/* Placeholder for future advanced filters */}
           </div>
           
-          {/* Post Project button */}
-          <motion.button
-            className="btn btn-primary normal-case w-full sm:w-auto order-1 sm:order-2"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.3 }}
-          >
-            <span className="flex items-center gap-1 justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-              </svg>
-              Post a Project
-            </span>
-          </motion.button>
+          {/* Empty div to maintain layout structure */}
+          <div className="order-1 sm:order-2">
+          </div>
         </div>
         
         {/* Active filters display - For visual consistency with talent page */}

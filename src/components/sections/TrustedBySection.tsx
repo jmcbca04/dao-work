@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function TrustedBySection() {
   const containerVariants = {
@@ -27,6 +28,15 @@ export default function TrustedBySection() {
     }
   };
 
+  // Logo data with image paths and alt text
+  const logos = [
+    { src: "/images/logos/beaker-dao-pic.jpg", alt: "Beaker DAO" },
+    { src: "/images/logos/flamingo-dao-pic.jpg", alt: "Flamingo DAO" },
+    { src: "/images/logos/lao-dao-pic.jpg", alt: "LAO DAO" },
+    { src: "/images/logos/neon-dao-pic.jpg", alt: "Neon DAO" },
+    { src: "/images/logos/punk-dao-pic.jpg", alt: "Punk DAO" },
+  ];
+
   return (
     <section className="py-16 bg-dark-900 border-t border-dark-800 relative overflow-hidden">
       {/* Subtle background glow */}
@@ -47,42 +57,24 @@ export default function TrustedBySection() {
           </motion.h2>
           
           <motion.div className="flex flex-wrap justify-center items-center gap-12 md:gap-16">
-            {/* Replace with actual logos but styled for dark theme */}
-            <motion.div 
-              className="h-12 w-32 bg-dark-800/80 backdrop-blur-sm rounded-lg border border-dark-700/50 flex items-center justify-center text-gray-300 font-medium shadow-darkrise-sm hover:border-primary/30 transition-all duration-300"
-              variants={itemVariants}
-              whileHover={{ y: -3, boxShadow: "0 10px 25px -5px rgba(59, 130, 246, 0.15)" }}
-            >
-              Logo 1
-            </motion.div>
-            <motion.div 
-              className="h-12 w-32 bg-dark-800/80 backdrop-blur-sm rounded-lg border border-dark-700/50 flex items-center justify-center text-gray-300 font-medium shadow-darkrise-sm hover:border-primary/30 transition-all duration-300"
-              variants={itemVariants}
-              whileHover={{ y: -3, boxShadow: "0 10px 25px -5px rgba(59, 130, 246, 0.15)" }}
-            >
-              Logo 2
-            </motion.div>
-            <motion.div 
-              className="h-12 w-32 bg-dark-800/80 backdrop-blur-sm rounded-lg border border-dark-700/50 flex items-center justify-center text-gray-300 font-medium shadow-darkrise-sm hover:border-primary/30 transition-all duration-300"
-              variants={itemVariants}
-              whileHover={{ y: -3, boxShadow: "0 10px 25px -5px rgba(59, 130, 246, 0.15)" }}
-            >
-              Logo 3
-            </motion.div>
-            <motion.div 
-              className="h-12 w-32 bg-dark-800/80 backdrop-blur-sm rounded-lg border border-dark-700/50 flex items-center justify-center text-gray-300 font-medium shadow-darkrise-sm hover:border-primary/30 transition-all duration-300"
-              variants={itemVariants}
-              whileHover={{ y: -3, boxShadow: "0 10px 25px -5px rgba(59, 130, 246, 0.15)" }}
-            >
-              Logo 4
-            </motion.div>
-            <motion.div 
-              className="h-12 w-32 bg-dark-800/80 backdrop-blur-sm rounded-lg border border-dark-700/50 flex items-center justify-center text-gray-300 font-medium shadow-darkrise-sm hover:border-primary/30 transition-all duration-300"
-              variants={itemVariants}
-              whileHover={{ y: -3, boxShadow: "0 10px 25px -5px rgba(59, 130, 246, 0.15)" }}
-            >
-              Logo 5
-            </motion.div>
+            {logos.map((logo, index) => (
+              <motion.div 
+                key={index}
+                className="h-28 w-28 bg-dark-800/80 backdrop-blur-sm rounded-full border border-dark-700/50 flex items-center justify-center text-gray-300 font-medium shadow-darkrise-sm hover:border-primary/30 transition-all duration-300 p-2 overflow-hidden"
+                variants={itemVariants}
+                whileHover={{ y: -3, boxShadow: "0 10px 25px -5px rgba(59, 130, 246, 0.15)" }}
+              >
+                <div className="relative h-full w-full rounded-full overflow-hidden">
+                  <Image
+                    src={logo.src}
+                    alt={logo.alt}
+                    fill
+                    sizes="(max-width: 768px) 112px, 112px"
+                    className="object-cover"
+                  />
+                </div>
+              </motion.div>
+            ))}
           </motion.div>
         </motion.div>
       </div>

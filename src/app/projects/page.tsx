@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <div className="w-full bg-gradient-to-b from-dark-900 via-dark-900/95 to-dark-800 min-h-screen">
-      <div className="pt-2 sm:pt-8 pb-16 sm:pb-24">
+      <div className="pb-24">
         <ProjectsHeader />
-        <div className="container mx-auto px-4 sm:px-8">
+        <div className="container mx-auto px-4 md:px-8 mt-8">
           <ProjectsList />
         </div>
       </div>

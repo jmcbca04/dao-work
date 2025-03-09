@@ -21,25 +21,27 @@ const categories = [
 export default function CategoryFilter({ selectedCategory, setSelectedCategory }: CategoryFilterProps) {
   return (
     <motion.div 
-      className="mb-8 overflow-x-auto"
+      className="mb-8"
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: 0.3 }}
     >
-      <div className="flex space-x-2 pb-2">
-        {categories.map((category) => (
-          <button
-            key={category.id}
-            onClick={() => setSelectedCategory(category.id)}
-            className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-300 
-              ${selectedCategory === category.id 
-                ? 'bg-primary text-white' 
-                : 'bg-dark-700 text-gray-400 hover:bg-dark-600 hover:text-white'}`
-            }
-          >
-            {category.name}
-          </button>
-        ))}
+      <div className="overflow-x-auto pb-3 hide-scrollbar">
+        <div className="flex flex-wrap gap-2">
+          {categories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setSelectedCategory(category.id)}
+              className={`px-5 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-300 
+                ${selectedCategory === category.id 
+                  ? 'bg-primary text-white shadow-md' 
+                  : 'bg-dark-700/60 text-white hover:bg-dark-600 border border-indigo-500/20'}`
+              }
+            >
+              {category.name}
+            </button>
+          ))}
+        </div>
       </div>
     </motion.div>
   );

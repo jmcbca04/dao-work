@@ -3,9 +3,9 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
-export default function CTASection() {
+export default function HowItWorksCTA() {
   return (
-    <section className="py-36 bg-gradient-to-b from-dark-900 to-black relative overflow-hidden">
+    <section className="pt-20 pb-10 bg-gradient-to-b from-dark-900 to-black relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
@@ -44,7 +44,7 @@ export default function CTASection() {
           </motion.h2>
           
           <motion.p 
-            className="text-lg mb-12 text-gray-300 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg mb-10 text-gray-300 max-w-2xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ 
               opacity: 1, 
@@ -102,10 +102,10 @@ export default function CTASection() {
               whileTap={{ scale: 0.98 }}
             >
               <Link 
-                href="/about" 
+                href="/talent" 
                 className="inline-block w-full sm:w-auto bg-dark-800/50 backdrop-blur-sm hover:bg-dark-700/60 text-white border border-primary/20 font-semibold px-10 py-4 rounded-full transition-all hover:border-primary/40 text-center"
               >
-                Learn More
+                Find Talent
               </Link>
             </motion.div>
           </motion.div>

@@ -48,23 +48,21 @@ const Header = () => {
           
           {/* Right side with connect wallet button */}
           <div className="flex items-center">
-            <Link href="/connect">
-              <motion.span 
-                className="bg-gradient-to-r from-primary to-accent-purple text-white font-medium px-6 py-3 rounded-full transition-all shadow-darkrise-sm"
-                whileHover={{ 
-                  scale: 1.05,
-                  boxShadow: "0px 8px 20px rgba(59, 130, 246, 0.3)"
-                }}
-                whileTap={{ scale: 0.98 }}
-                transition={{ 
-                  type: "spring", 
-                  stiffness: 400, 
-                  damping: 10 
-                }}
-              >
-                Connect Wallet
-              </motion.span>
-            </Link>
+            <motion.button 
+              className="bg-gradient-to-r from-primary to-accent-purple text-white font-medium px-6 py-3 rounded-full transition-all shadow-darkrise-sm"
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0px 8px 20px rgba(59, 130, 246, 0.3)"
+              }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ 
+                type: "spring", 
+                stiffness: 400, 
+                damping: 10 
+              }}
+            >
+              Connect Wallet
+            </motion.button>
             
             {/* Mobile menu button - only visible on small screens */}
             <motion.button 
